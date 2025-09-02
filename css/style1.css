@@ -1,0 +1,335 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+html{scroll-behavior: smooth;} /* 스크롤시 부드럽게 이동 */
+body{
+  line-height: 1.5;
+  color: #222;
+}
+
+.goto-top{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  background-color: #fff;
+  /* font-size: 38px; */
+}
+
+
+/* header--s */
+header{
+  font-family: "Raleway", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #eee;
+}
+#header-inner{
+  width: 1400px;
+  height: inherit;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gnb{
+  display: flex;
+  column-gap: 30px;
+  font-size: 14px;
+}
+.gnb a{
+  position: relative;
+}
+.gnb a::before{
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: green;
+  border-radius: 5px;
+  transform: translateX(-50%);
+  transition: 0.35s;
+}
+.gnb a:hover::before{width: 100%;}
+/* .gnb a{
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #000;
+  font-weight: 500;
+}
+.gnb a:hover {
+  color: aqua;
+} */
+
+
+/* main-----s */
+#wrap{
+  margin-top: 80px;
+  font-family: "Raleway", sans-serif;
+}
+.main-bg{
+  width: 100%;
+  height: 800px;
+  border: 1px solid salmon;
+  background: url(../imges/main_bg.png)no-repeat center;
+  background-size: contain;
+}
+
+section{
+  width: 1400px;
+  margin: 200px auto;
+}
+/* s1---s */
+.s1_inner {
+  width: inherit;
+  height: 700px;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  border: 1px solid purple;
+
+  display: flex;
+  justify-content: center;
+}
+.s1_inner p{
+  text-align: center;
+  color: #B3B3B3;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+.s1_inner p span{
+  color: red;
+}
+
+  .s1_img {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width:330px;
+    height: 650px;
+
+    transform:translate(-50%, -50%); /* 화면 정중앙 이동 */
+
+    border: 1px solid royalblue;
+    background: url(../imges/main_pen.png)no-repeat center;
+    background-size: contain;
+  }
+  .s1_img img{
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+  }
+
+  /* s2--s */
+  .s2_wrap{
+    width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+     color: #000;
+     position: relative;
+     margin-top: 100px;
+  }
+  .s2_wrap::after{
+    content: 'MORE';
+    position: absolute;
+    top: 100%;
+    background-color: pink;
+    width: 200px;
+    height: 52px;
+    line-height: 52px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+   .s2_wrap:hover::after{
+    background-color: aqua;
+    pointer-events: auto;
+   }
+  .s2-left{
+    /* margin: 105px 24px 100px 0; */
+    width: 490px;
+    height: 490px;
+    border: 1px solid orange;
+  }
+  .s2-left h2 {
+    font-size :40px;
+    font-size: 600;
+    margin-bottom: 35px;
+  }
+  .s2-left p{
+    font-size: 16px;
+    margin-bottom: 60px;
+  }
+  .s2_right{
+    width: 700px;
+    height: 490px;
+    display: flex;
+    border: 1px solid red;
+  }
+  .s2_right div{
+    width: 280px;
+    height: 400px;
+  }
+  
+  /* .main{
+    width: 100%;
+    height: 768px;
+    background-color: aqua;
+  }
+
+  .main_right{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+
+  /* s3----s */
+  .s3_wrap p{
+    margin: 0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    font-weight: 500;
+    background-color: #eee;
+  }
+   .s3_wrap .title_lab{
+    height: 170px;
+    border: 1px solid green;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   .s3_wrap:first-child .title_lab:before,
+   .s3_wrap:last-child .title_lab::before {
+    content: '';
+    display: inline-block;
+    width: 260px;
+    height: 130px;
+    border: solid 1px pink;
+    background: url(../imges/ink_title.png)
+    no-repeat center;
+    background-size: contain;
+   }
+
+
+   /* .s3_title{
+    text-align: center;
+    border: 1px solid;
+   }
+   .s3_title p{
+    margin: auto;
+    font-size: 60px;
+    font-weight: 600;
+   }
+   .s3_title p span{
+    position: relative;
+   }
+   .s3_title p span::before{
+    content: '';
+    position: absolute;
+    top: -35px;
+    left: 0;
+    transform: translateX(-80%);
+    width: 200px;
+    height: 100px;
+    border: 1px solid blueviolet;
+    background: url(../imges/ink_title.png)no-repeat center;
+    background-size: contain;
+   }
+   .s3_title p:nth-child(2){
+    border: 1px solid orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+
+  /* s3 스크롤*/
+  #s3 .scroll-down{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border: solid 2px #ff2626;
+    border-radius: 50%;
+    margin: 40px auto 0;
+    transition: 0.35s;
+    background: url(../imges/s3-round.png)
+    no-repeat center;
+    background-size: contain;
+  }
+   #s3 .scroll-down:hover {
+    background-color: #000;
+    color: white;
+   }
+  
+
+/* s3_ink */
+  #s3_ink .ink {
+    overflow: hidden;
+    position: relative;
+    width: 1400px;
+    height: 900px;
+  }
+  #s3_ink img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: -1;
+  }
+  #s3_ink .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 350px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+    transition: 0.35s;
+    color: #fff;
+  }
+  #s3_ink .content:before{
+    content: '';
+    position: absolute;
+    border: 1px solid sandybrown;
+    width: 100%;
+    height: 400px;
+    transform: translateX(-50%);
+    transition: 0.35s;
+    z-index: -10;
+  }
+  #s3_ink .content p:nth-child(1){
+    font-size: 32px;
+    font-weight: 800;
+  }
+  #s3_ink .content p:nth-child(2){
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 20px;
+    font-weight: 300;
+    opacity: 0;
+  }
+
+
+  #s3_ink .ink .content:hover p{opacity:1; transition-delay: 0.3s;}
+  #s3_ink .ink .content:hover:before{height: 185px;}
+  #s3_ink .ink .content:hover{top:55%; cursor: pointer;}
+
